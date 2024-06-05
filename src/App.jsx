@@ -15,7 +15,7 @@ function Myapp() {
   }
 
   function handleClick() {
-    fetchAdvice();
+    fetchAdvice(); // Call fetchAdvice each time the button is clicked
   }
 
   return (
