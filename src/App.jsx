@@ -1,9 +1,10 @@
 import { useState } from "react";
 import './App.css';
+// *************************************************************************
 
 function Myapp() {
   const [advice, setAdvice] = useState('');
-
+// ************************************************************************
   async function fetchAdvice() {
     try {
       const response = await fetch('https://api.adviceslip.com/advice');
@@ -13,6 +14,7 @@ function Myapp() {
       console.error('Error fetching the advice:', error);
     }
   }
+  // ************************************************************************
 
   function handleClick() {
     fetchAdvice(); // Call fetchAdvice each time the button is clicked
@@ -27,7 +29,7 @@ function Myapp() {
     </div>
   );
 }
-
+// ****************************************************************************
 function App() {
   return (
     <>
