@@ -22,4 +22,6 @@
     background-color: orange;
     color: white;
     font-weight: 700;
+    display: flex;
+    justify-content: center;
 }
