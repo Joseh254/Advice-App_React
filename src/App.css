@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: #00A9FF;
+    gap: 0;
+}
+
+.generate{
+    align-items: center;
+    background-color: #00A9FF;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+#button{
+    height: 2rem;
+    background-color: orange;
+    color: white;
+    font-weight: 700;
+}
