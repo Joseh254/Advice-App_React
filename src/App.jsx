@@ -27,7 +27,7 @@ function Myapp() {
   return (
     <div className="mybutton">
       <button onClick={handleClick} className="header" id="button">
-        Click to get advice of the day
+        Click Here To Get Today's Advice
       </button> <br /> <br />
       {isLoading ? (
         <p className="loading">Loading please wait...</p> 
