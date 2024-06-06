@@ -4,28 +4,36 @@ import './App.css';
 
 function Myapp() {
   const [advice, setAdvice] = useState('');
+  const [isLoading, setIsLoading] = useState(false); 
 // ************************************************************************
   async function fetchAdvice() {
     try {
+      setIsLoading(true); 
       const response = await fetch('https://api.adviceslip.com/advice');
       const data = await response.json();
       setAdvice(data.slip.advice);
     } catch (error) {
       console.error('Error fetching the advice:', error);
+    } finally {
+      setIsLoading(false); 
     }
   }
   // ************************************************************************
 
   function handleClick() {
-    fetchAdvice(); // Call fetchAdvice each time the button is clicked
+    fetchAdvice(); 
   }
 
   return (
-    <div>
+    <div className="mybutton">
       <button onClick={handleClick} className="header" id="button">
         Click to get advice of the day
-      </button>
-      <h1 className="result">{advice}</h1>
+      </button> <br /> <br />
+      {isLoading ? (
+        <p className="loading">Loading please wait...</p> 
+      ) : (
+        <h1 className="result">{advice}</h1>  
+      )}
     </div>
   );
 }
@@ -33,11 +41,12 @@ function Myapp() {
 function App() {
   return (
     <>
-      <Myapp />
+      
       <div className="header">
         <p>By Joseph Mbugua</p>
         <h1>ADVICE APP</h1>
       </div>
+      <Myapp />
     </>
   );
 }
