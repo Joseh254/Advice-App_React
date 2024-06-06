@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
+   
     background-color: #00A9FF;
     gap: 0;
 }
@@ -42,7 +42,6 @@
 .result{
     display: block;
     justify-content: center;
-    background-color: orange;
     justify-content: center;
     padding: 1rem;
 }
