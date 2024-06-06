@@ -29,7 +29,10 @@
     justify-content: center;
     padding: 1rem;
     font-weight: 700;
-    border-radius: 10%;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: large;
 }
 
 .mybutton{
